@@ -91,7 +91,7 @@
             // ILoveYouButton
             // 
             this.ILoveYouButton.Image = global::tamogoji.Properties.Resources.ILoveYouOff;
-            this.ILoveYouButton.Location = new System.Drawing.Point(250, 146);
+            this.ILoveYouButton.Location = new System.Drawing.Point(249, 44);
             this.ILoveYouButton.Name = "ILoveYouButton";
             this.ILoveYouButton.Size = new System.Drawing.Size(226, 76);
             this.ILoveYouButton.TabIndex = 4;
@@ -139,7 +139,6 @@
             this.DialogeText.Size = new System.Drawing.Size(53, 23);
             this.DialogeText.TabIndex = 7;
             this.DialogeText.Text = "label1";
-            this.DialogeText.Click += new System.EventHandler(this.label3_Click);
             // 
             // menu
             // 

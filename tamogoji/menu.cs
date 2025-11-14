@@ -15,13 +15,11 @@ namespace tamogoji
 {
     public partial class menu : Form
     {
-        List<PictureBox> DialogMenu;
         private Form1 PetForm;
         public menu(Form1 mainForm)
         {
             InitializeComponent();
             PetForm = mainForm;
-            DialogMenu.Add(ILoveYouButton);
         }
 
         private void Exit(object sender, EventArgs e)
@@ -153,11 +151,6 @@ namespace tamogoji
         {
             if (!print)
                 await PrintMessange("тест тест тест");
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
