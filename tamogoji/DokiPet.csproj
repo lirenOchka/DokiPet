@@ -49,6 +49,7 @@
     <Compile Include="Classes\menus.cs" />
     <Compile Include="Classes\petImages.cs" />
     <Compile Include="Classes\DataPet.cs" />
+    <Compile Include="Classes\stuleMessangeText.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +97,6 @@
     <Content Include="image\dialogueButtonOff.png" />
     <Content Include="image\dialogueButtonOn.png" />
     <Content Include="image\fon.jpg" />
-    <None Include="image\ILoveYouOff.png" />
     <Content Include="image\Sayori_Sticker_Distrait.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

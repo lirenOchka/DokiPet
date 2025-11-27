@@ -130,13 +130,12 @@
             // 
             // DialogeText
             // 
-            this.DialogeText.AutoSize = true;
             this.DialogeText.BackColor = System.Drawing.Color.Violet;
             this.DialogeText.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DialogeText.ForeColor = System.Drawing.Color.Purple;
             this.DialogeText.Location = new System.Drawing.Point(16, 271);
             this.DialogeText.Name = "DialogeText";
-            this.DialogeText.Size = new System.Drawing.Size(53, 23);
+            this.DialogeText.Size = new System.Drawing.Size(467, 221);
             this.DialogeText.TabIndex = 7;
             this.DialogeText.Text = "label1";
             // 

@@ -15,18 +15,39 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace tamogoji
 {
-
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
-            DataPet.openPet = choicePet();
+            if (File.ReadAllLines("settings.txt")[0].Split('=')[1].Trim().ToLower() == "all".ToLower()) { 
+                Form1 form1;
+                DataPet.createCollection();
+                for (int i = 1; i < DataPet.CollectionPet.Count; i++)
+                {
+                    form1 = new Form1(DataPet.CollectionPet[i]);
+                    form1.Show();
+                    Thread.Sleep(1000);
+                }
+
+                DataPet.openPet = DataPet.CollectionPet[0];
+            }
+            else {
+                DataPet.openPet = choicePet();
+            }
+                this.Icon = Icon.ExtractAssociatedIcon("image\\Doki_Doki_Literature_Club_Logo.ico");
+                Jump();
+                pet.Image = DataPet.openPet.calmness; 
+        }
+        public Form1(petImages OpenPet)
+        {
+            InitializeComponent();
+            DataPet.openPet = OpenPet;
             this.Icon = Icon.ExtractAssociatedIcon("image\\Doki_Doki_Literature_Club_Logo.ico");
             Jump();
             pet.Image = DataPet.openPet.calmness;
         }
-        
+
         private petImages choicePet()
         {
             string[] str = File.ReadAllLines("settings.txt");

@@ -1,0 +1,11 @@
+C:\Users\student\Source\Repos\DokiPet\tamogoji\bin\Debug\tamogoji.exe.config
+C:\Users\student\Source\Repos\DokiPet\tamogoji\bin\Debug\tamogoji.exe
+C:\Users\student\Source\Repos\DokiPet\tamogoji\bin\Debug\tamogoji.pdb
+C:\Users\student\Source\Repos\DokiPet\tamogoji\obj\Debug\DokiPet.csproj.AssemblyReference.cache
+C:\Users\student\Source\Repos\DokiPet\tamogoji\obj\Debug\tamogoji.Form1.resources
+C:\Users\student\Source\Repos\DokiPet\tamogoji\obj\Debug\tamogoji.menu.resources
+C:\Users\student\Source\Repos\DokiPet\tamogoji\obj\Debug\tamogoji.Properties.Resources.resources
+C:\Users\student\Source\Repos\DokiPet\tamogoji\obj\Debug\DokiPet.csproj.GenerateResource.cache
+C:\Users\student\Source\Repos\DokiPet\tamogoji\obj\Debug\DokiPet.csproj.CoreCompileInputs.cache
+C:\Users\student\Source\Repos\DokiPet\tamogoji\obj\Debug\tamogoji.exe
+C:\Users\student\Source\Repos\DokiPet\tamogoji\obj\Debug\tamogoji.pdb

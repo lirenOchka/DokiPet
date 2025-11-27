@@ -27,5 +27,12 @@ namespace tamogoji
         static public menu Menu;
         static public bool openMenu = false;
         static public menus activeMenu = menus.main;
+        static public void createCollection()
+        {
+            CollectionPet.Add(Natsuki);
+            CollectionPet.Add(saoyri);
+            CollectionPet.Add(monika);
+            CollectionPet.Add(Yuri);
+        }
     }
 }

@@ -15,6 +15,8 @@ namespace tamogoji
 {
     public partial class menu : Form
     {
+        List<Label> lables;
+
         private Form1 PetForm;
         public menu(Form1 mainForm)
         {
@@ -47,6 +49,7 @@ namespace tamogoji
             ExitButton.Size = ExitButton.Image.Size;
             ExitButton.Location = new Point(this.Width - ExitButton.Image.Size.Width - 12, DialogeWindow.Location.Y - ExitButton.Image.Size.Height - 12);
 
+            DialogeText.Text = DataPet.openPet.name + ":";
         }
 
         private void changeTextureDown(object sender, MouseEventArgs e)
@@ -63,9 +66,9 @@ namespace tamogoji
                 case "ILoveYouButton":
                     ILoveYouButton.Image = Image.FromFile("image\\buttons\\ILoveYouOn.png");
                     break;
+
             }
         }
-
 
         private void changeTextureUp(object sender, MouseEventArgs e)
         {
@@ -94,22 +97,21 @@ namespace tamogoji
                 PetForm.Close();
         }
 
-
         private void openMenuPage(menus nextMenu)
         {
             if(DataPet.activeMenu == menus.main)
                 backButton.Visible = true;
             else if(nextMenu == menus.main) 
                 backButton.Visible = false;
+
+            clearMenu();
             switch (nextMenu)
             {
                 case menus.main:
-                    clearMenu();
                     DataPet.activeMenu = menus.main;
                     dialogueButton.Visible = true;
                     break;
                 case menus.dialog:
-                    clearMenu();
                     DataPet.activeMenu = menus.dialog;
                     ILoveYouButton.Visible = true;
                     break;
@@ -133,15 +135,33 @@ namespace tamogoji
             openMenuPage(menus.dialog);
         }
 
-        private bool print = false; 
+        private Font chacheStuleMassengeText(stuleMessangeText stuleMessange)
+        {
+            switch (stuleMessange)
+            {
+                case stuleMessangeText.normal:
+                    return new Font(DialogeText.Font.FontFamily, 12);
+                case stuleMessangeText.whisper:
+                    return new Font(DialogeText.Font.FontFamily, 9);
+                case stuleMessangeText.scream:
+                    return new Font(DialogeText.Font.FontFamily, 16);
+                case stuleMessangeText.bigScream:
+                    return new Font(DialogeText.Font.FontFamily, 20);
+                default:
+                    return new Font(DialogeText.Font.FontFamily, 12);
 
-        private async Task PrintMessange(string Messange)
+            }
+        }
+
+        private bool print = false;
+
+        private async Task PrintMessange(string Messange, int speed)
         {
             print = true;
             DialogeText.Text = DataPet.openPet.name + ": ";
             for (int i = 0; i < Messange.Length; i++)
             {
-                await Task.Delay(100);
+                await Task.Delay(speed);
                 DialogeText.Text += Messange[i];
             }
             print = false;
@@ -149,8 +169,9 @@ namespace tamogoji
 
         private async void ILoveYouButton_Click(object sender, EventArgs e)
         {
-            if (!print)
-                await PrintMessange("тест тест тест");
+            if (!print) { 
+                await PrintMessange("лол, это тестовое сообщение", 50);
+            }
         }
     }
 }
